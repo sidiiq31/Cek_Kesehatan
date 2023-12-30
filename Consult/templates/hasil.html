@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hasil Diagnosa</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+        <!-- url_for untuk mengarahkan dari mana atau kemana file yang akan kita ambil dengan element href -->
+    </head>
+    
+    <body class="body2">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dokter_spesialis">Dokter Spesialis</a></li>
+                <li><a href="/alamat">Alamat</a></li>
+                <li><a href="/contact">Contact Person</a></li>
+            </ul>
+        </nav>
+        <h2>
+            <span>Hasil Diagnosa</span>
+        </h2>
+        <form class="form2" method="post">
+            <p class="p2">Potensi penyakit berdasarkan keluhan yang anda berikan:</p>
+            <ol start="1">
+                {% for gejala in diagnosis %}
+                <li>{{ gejala }}</li>
+                {% endfor %}
+                <!-- fungsi { %...% } adalah template engine system dalam python. bagi yang pernah menggunakan bahasa pemrograman php pasti tidak asing dengan script < ? php echo ' ... ' ; ? > fungsi nya sama-->
+            </ol>
+        </form>
+            <center>
+                <p class="p2">Untuk konsultasi lebih lanjut bisa hubungi Dokter</p>
+                <a href="{{ url_for('whatsapp_doctor') }}">
+                    <button class="button2">Kontak Dokter via WhatsApp</button>
+                </a>
+            </center>
+            <div class="imageA"></div>
+            <div class="imageB"></div>
+            <div class="imageC"></div>
+    </body>
+</html>

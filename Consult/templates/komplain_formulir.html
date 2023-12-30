@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- head berfungsi sebagai tempat untuk meletakkan metadata mengenai informasi-informasi halaman web yang tidak ditampilkan pada halaman tersebut -->
+<!-- contoh metadata seperti titile, meta, link ,style , script dsb-->
+    <title>Konsultasi Kesehatan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="body1">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dokter_spesialis">Dokter Spesialis</a></li>
+            <li><a href="/alamat">Alamat</a></li>
+            <li><a href="/contact_person">Contact Person</a></li>
+        </ul>
+    </nav>
+    <div>
+<!-- Body untuk badan dari html, serta untuk menampilkan isi dari web-->
+        <h1>
+            <span >Keluhan Kesehatan</span>
+        </h1>
+        <form class="form1" action="/submit" method="post">
+    <!-- form berfungsi untuk membuat elemen Form pada halaman Web supaya tersusun dengan rapi biasanya bersisi tentang data, informasi dsb-->
+    <!-- Class untuk memberi style pada elemen-->
+    <!-- action untuk memberikan aksi pada data yang dikirim dari form ketika form tersebut di submit-->
+    <!-- method berfungsi untuk menentukan bagaimana form tersebut akan diberlakukan seperti post ataupun get-->
+            <p class="p1">Pilih gejala kesehatan yang anda alami (boleh lebih dari satu):</p>
+            
+            <input type="checkbox" id="demam" name="gejala" value="demam">
+            <label for="demam">Demam</label>
+            <br>
+            <input type="checkbox" id="pusing" name="gejala" value="pusing">
+            <label for="pusing">Pusing</label>
+            <br>
+            <input type="checkbox" id="batuk" name="gejala" value="batuk">
+            <label for="batuk">Batuk</label>
+            <br>
+            <input type="checkbox" id="mual" name="gejala" value="mual">
+            <label for="mual">Mual</label>
+            <br>              
+            <input type="checkbox" id="penurunan berat badan tanpa sebab" name="gejala" value="penurunan berat badan tanpa sebab">
+            <label for="penurunan berat badan tanpa sebab">Penurunan berat badan tanpa sebab</label>
+            <br>
+            <input type="checkbox" id="kerusakan gigi" name="gejala" value="kerusakan gigi">
+            <label for="kerusakan gigi">Kerusakan gigi</label>
+            <br>
+            <input type="checkbox" id="mendengkur" name="gejala" value="mendengkur">
+            <label for="mendengkur">Mendengkur</label>
+            <br>
+            <input type="checkbox" id="sulit tidur disertai kecemasan" name="gejala" value="sulit tidur disertai kecemasan">
+            <label for="sulit tidur disertai kecemasan">Sulit tidur disertai kecemasan</label><br><br>
+
+            <input type="submit" value="Cek Gejala">
+        </form>
+        <div class="image2"></div>
+        <div class="image"></div>
+        <div class="image1"></div>
+        <div class="image3"></div>
+        <div class="image4"></div>
+    </div>
+</body>
+</html>
